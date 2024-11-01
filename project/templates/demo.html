@@ -4,10 +4,35 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        .nav{
+            background-color: black;
+            width:100%;
+            height: 50px;
+            gap: 50px;
+        }
+        .nav a{
+            color: white;
+            margin-left: 15px;
+            text-decoration: none;
+            margin-top: 20px;
+        }
+    </style>
 </head>
 <body>
-    <a href="about">About</a>
-    <a href="contact">Contact</a>
-    <h1>Happy Diwali</h1>
+    <div class="nav">
+        <a href="demo">HOME</a>
+        <a href="about">About</a>
+        <a href="contact">Contact</a>
+
+
+    </div>
+    <h1>Home PAGE</h1>
+    <form action="" method="post">
+        {% csrf_token %}
+        <input type="text" placeholder="Enter name" name="name">
+        <input type="number" placeholder="Enter age" name="age">
+        <input type="submit" value="submit">
 </body>
 </html>
+
